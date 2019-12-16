@@ -10,8 +10,8 @@ export class StarWarsService {
     private http: HttpClient
   ) { }
 
-  getDate(url: string): any {
-    console.log(url);
+  getData(url: string): any {
+    console.log('StarWarsService - getData', url);
     if (!url) {
       return this.http.get(`https://swapi.co/api/people`);
     }

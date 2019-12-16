@@ -16,18 +16,18 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getDate();
+    this.getData();
   }
 
-  getDate(url?: string): void {
-    this.starWarsService.getDate(url).subscribe(
+  getData(url?: string): void {
+    this.starWarsService.getData(url).subscribe(
       (res: Response) => {
-        console.log(res);
+        console.log('StarWarsService getData response', res);
         res.results.forEach((person: Result) => {
           this.people.push(new Person(person.name, birthYearConvert(person.birth_year), Number(person.height), Number(person.mass)));
         });
         if (res.next) {
-          this.getDate(res.next);
+          this.getData(res.next);
         } else {
           console.log('Final', this.people.sort(this.sortFunc));
         }
