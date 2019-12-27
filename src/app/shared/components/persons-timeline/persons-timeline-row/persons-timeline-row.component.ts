@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { GroupPerson } from 'src/app/core/models/GroupPerson';
 
 @Component({
   selector: 'app-persons-timeline-row',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./persons-timeline-row.component.scss']
 })
 export class PersonsTimelineRowComponent implements OnInit {
+
+  @Input() data: Array<GroupPerson>;
 
   constructor() { }
 

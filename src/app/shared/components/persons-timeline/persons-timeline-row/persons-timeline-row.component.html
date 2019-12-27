@@ -1,5 +1,3 @@
 <div class="persons-timeline-row">
-    <app-person-item></app-person-item>
-    <app-person-item></app-person-item>
-    <app-person-item></app-person-item>
+    <app-person-item *ngFor="let person of data" [name]="person.name" [type]="person.bmiType"></app-person-item>
 </div>

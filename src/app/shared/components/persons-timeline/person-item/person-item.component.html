@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col">
-        <div class="person-item">
-            <p>Imie i nazwisko</p>
+        <div class="person-item" [ngClass]="{ 'black': type === 1, 'green': type === 2, orange: type === 3, red: type === 4 }">
+            <span>{{ name }}</span>
         </div>
     </div>
 </div>
