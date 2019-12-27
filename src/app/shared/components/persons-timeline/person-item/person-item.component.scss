@@ -1,0 +1,29 @@
+.person-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: yellowgreen;
+}
+
+.black {
+    background-color: #333;
+    color: #fff;
+}
+
+.green {
+    background-color: #108f32;
+    color: #000;
+}
+
+.orange {
+    background-color: #b87211;
+    color: #000;
+}
+
+.red {
+    background-color: #b81111;
+    color: #fff;
+}

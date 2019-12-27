@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1 1 auto;
+    min-height: 1px;
+}
+
+.text-center {
+    text-align: center;
+}
