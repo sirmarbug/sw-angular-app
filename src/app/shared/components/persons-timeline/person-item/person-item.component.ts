@@ -16,4 +16,20 @@ export class PersonItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  isBlack(): boolean {
+    return this.type === BMITypes.Below16 ? true : false;
+  }
+
+  isGreen(): boolean {
+    return this.type === BMITypes.Betwen1624 ? true : false;
+  }
+
+  isOrange(): boolean {
+    return this.type === BMITypes.Betwen2540 ? true : false;
+  }
+
+  isRed(): boolean {
+    return this.type === BMITypes.Above40 ? true : false;
+  }
+
 }
