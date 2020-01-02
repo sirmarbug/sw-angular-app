@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { GroupPerson } from 'src/app/core/models/GroupPerson';
+import { PersonGroup } from 'src/app/core/models';
 
 @Component({
   selector: 'app-persons-timeline-row',
@@ -8,7 +8,7 @@ import { GroupPerson } from 'src/app/core/models/GroupPerson';
 })
 export class PersonsTimelineColComponent implements OnInit {
 
-  @Input() data: Array<GroupPerson>;
+  @Input() data: Array<PersonGroup>;
 
   constructor() { }
 

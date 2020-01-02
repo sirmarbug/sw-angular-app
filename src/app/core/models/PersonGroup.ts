@@ -1,5 +1,5 @@
 import { Person } from './person';
-export class GroupPerson {
+export class PersonGroup {
     constructor(
         public title: string,
         public people: Array<Person>

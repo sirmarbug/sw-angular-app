@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Person, Response, Result } from 'src/app/core/models';
+import { Person, Response, Result, PersonGroup } from 'src/app/core/models';
 import { StarWarsService } from 'src/app/core/services';
 import { BMICalc, birthYearConvert, BMIType } from '../../utils';
-import { GroupPerson } from 'src/app/core/models/GroupPerson';
 
 @Component({
   selector: 'app-persons-timeline',
@@ -12,7 +11,7 @@ import { GroupPerson } from 'src/app/core/models/GroupPerson';
 export class PersonsTimelineComponent implements OnInit {
 
   people: Array<Person> = new Array<Person>();
-  data: Array<GroupPerson>;
+  data: Array<PersonGroup>;
   loading = true;
 
   constructor(private starWarsService: StarWarsService) { }
@@ -24,13 +23,13 @@ export class PersonsTimelineComponent implements OnInit {
 
   private groupInit(): void {
     this.data = [
-      new GroupPerson('0 - 20 BBY', new Array<Person>()),
-      new GroupPerson('20 - 40 BBY', new Array<Person>()),
-      new GroupPerson('40 - 60 BBY', new Array<Person>()),
-      new GroupPerson('60 - 80 BBY', new Array<Person>()),
-      new GroupPerson('80 - 100 BBY', new Array<Person>()),
-      new GroupPerson('100 BBY++', new Array<Person>()),
-      new GroupPerson('Unknown', new Array<Person>())
+      new PersonGroup('0 - 20 BBY', new Array<Person>()),
+      new PersonGroup('20 - 40 BBY', new Array<Person>()),
+      new PersonGroup('40 - 60 BBY', new Array<Person>()),
+      new PersonGroup('60 - 80 BBY', new Array<Person>()),
+      new PersonGroup('80 - 100 BBY', new Array<Person>()),
+      new PersonGroup('100 BBY++', new Array<Person>()),
+      new PersonGroup('Unknown', new Array<Person>())
     ];
   }
 
