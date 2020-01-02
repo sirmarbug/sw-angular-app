@@ -3,10 +3,10 @@ import { GroupPerson } from 'src/app/core/models/GroupPerson';
 
 @Component({
   selector: 'app-persons-timeline-row',
-  templateUrl: './persons-timeline-row.component.html',
-  styleUrls: ['./persons-timeline-row.component.scss']
+  templateUrl: './persons-timeline-col.component.html',
+  styleUrls: ['./persons-timeline-col.component.scss']
 })
-export class PersonsTimelineRowComponent implements OnInit {
+export class PersonsTimelineColComponent implements OnInit {
 
   @Input() data: Array<GroupPerson>;
 

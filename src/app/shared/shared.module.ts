@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PersonsTimelineComponent, PersonItemComponent, PersonsTimelineRowComponent } from './components';
+import { PersonsTimelineComponent, PersonItemComponent, PersonsTimelineColComponent } from './components';
 
 const components = [
   PersonsTimelineComponent,
   PersonItemComponent,
-  PersonsTimelineRowComponent
+  PersonsTimelineColComponent
 ];
 
 @NgModule({
