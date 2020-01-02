@@ -37,7 +37,6 @@ export class PersonsTimelineComponent implements OnInit {
   getData(url?: string): void {
     this.starWarsService.getData(url).subscribe(
       (res: Response) => {
-        console.log('StarWarsService getData response', res);
         res.results.forEach((person: Result) => {
           const bmi = BMICalc(Number(person.height), Number(person.mass));
           const newPerson = new Person(person.name, birthYearConvert(person.birth_year),
@@ -47,7 +46,6 @@ export class PersonsTimelineComponent implements OnInit {
         if (res.next) {
           this.getData(res.next);
         } else {
-          console.log('Final', this.people.sort(this.sortFunc));
           this.people = this.people.sort(this.sortFunc);
           this.groupPeople();
           this.loading = false;
@@ -91,7 +89,6 @@ export class PersonsTimelineComponent implements OnInit {
         return;
       }
     });
-    console.log('group', this.data);
   }
 
 }

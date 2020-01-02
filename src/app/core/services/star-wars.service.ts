@@ -11,7 +11,6 @@ export class StarWarsService {
   ) { }
 
   getData(url: string): any {
-    console.log('StarWarsService - getData', url);
     if (!url) {
       return this.http.get(`https://swapi.co/api/people`);
     }
