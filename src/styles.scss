@@ -5,6 +5,11 @@
     flex-wrap: wrap;
 }
 
+.row-loading {
+    align-content: center;
+    justify-content: center;
+}
+
 .col {
     flex: 1 1 auto;
     min-height: 1px;

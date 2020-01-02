@@ -13,6 +13,7 @@ export class PersonsTimelineComponent implements OnInit {
 
   people: Array<Person> = new Array<Person>();
   data: Array<GroupPerson>;
+  loading = true;
 
   constructor(private starWarsService: StarWarsService) { }
 
@@ -49,6 +50,7 @@ export class PersonsTimelineComponent implements OnInit {
           console.log('Final', this.people.sort(this.sortFunc));
           this.people = this.people.sort(this.sortFunc);
           this.groupPeople();
+          this.loading = false;
         }
       }
     );

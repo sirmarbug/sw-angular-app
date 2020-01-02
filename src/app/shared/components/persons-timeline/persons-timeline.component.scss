@@ -1,3 +1,28 @@
 .persons-timeline-row {
     border: 1px solid #000;
 }
+
+.col-loading {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    max-width: 200px;
+    height: 200px;
+    text-align: center;
+    -webkit-animation: animation 1s linear infinite;
+    animation: animation 1s linear infinite;
+}
+
+@keyframes animation {
+    0% {
+        color: #333;
+    }
+    50% {
+        color: #a1a1a1;
+    }
+    100% {
+        color: #333;
+    }
+}
